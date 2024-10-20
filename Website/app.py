@@ -8,12 +8,12 @@ import joblib
 
 app = Flask(__name__)
 
-with open('C:\\Users\\Srijan\\Desktop\\Internship\\Movie Recommender Systems\\Website\\PickleFile\\movies_name.pkl', 'rb') as file:
+with open('C:\\Users\\Srijan\\Desktop\\Internship\\Movie-Recommended-System\\Website\\PickleFile\\movies_name.pkl', 'rb') as file:
     movie_dict = pickle.load(file)
 movies = pd.DataFrame(movie_dict)
 
 data = joblib.load(
-    'C:\\Users\\Srijan\\Desktop\\Internship\\Movie Recommender Systems\\Website\\PickleFile\\model_save')
+    'C:\\Users\\Srijan\\Desktop\\Internship\\Movie-Recommended-System\\Website\\PickleFile\\model_save')
 
 
 def fetch_poster(movieId):
